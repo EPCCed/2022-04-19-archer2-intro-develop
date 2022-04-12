@@ -1,17 +1,14 @@
 ---
-title: "Debugging and profiling on ARCHER2"
+title: "Profiling on ARCHER2"
 teaching: 30
 exercises: 30
-start: True
 questions:
-- "What debugging tools are available on ARCHER2 and how can I access them?"
 - "What profiling tools are available on ARCHER2 and how can I access them?"
 - "Where can I find more documentation on and get help with these tools?"
 objectives:
-- "Know what tools are available to help you debug and profile parallel applications on ARCHER2."
+- "Know what tools are available to help you profile parallel applications on ARCHER2."
 - "Know where to get further help."
 keypoints:
-- "The main debugging tool on ARCHER2 is *gdb4hpc*"
 - "The main profiling tool on ARCHER2 is *CrayPat*"
 ---
 
