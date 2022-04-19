@@ -17,7 +17,7 @@ overview of the tools available, their applicability and links to more informati
 on profiling is beyond the scope of this course but if you are interested in this, then
 you may be interested in the Performance Analysis Workshop course offered by the ARCHER2 service.
 
-The [Cray Performance Measurement and Analysis Tools User Guide](https://pubs.cray.com/bundle/Cray_Performance_Measurement_and_Analysis_Tools_User_Guide_644_S-2376/page/About_the_Cray_Performance_Measurement_and_Analysis_Tools_User_Guide.html)
+The [Cray Performance Measurement and Analysis Tools User Guide](https://support.hpe.com/hpesc/public/docDisplay?docId=a00115110en_us&docLocale=en_US&page=Cray_Performance_Measurement_and_Analysis_Tools_CPMAT.html)
 and the ARCHER2 [profiling](https://docs.archer2.ac.uk/user-guide/profile/) documentation will also be useful.
 
 ## Profiling tools overview
@@ -446,8 +446,8 @@ auser@ln01:~/nbody-par> app2 nbody-parallel.exe+apa+114297-5209t
 You can find more information on the profiling tools available on ARCHER2 in the ARCHER2 Documentation
 and the Cray documentation:
 
-* [ARCHER2 Documentation](https://docs.archer2.ac.uk)
-* [Cray Technical Documentation](https://pubs.cray.com/)
+* [ARCHER2 Documentation](https://docs.archer2.ac.uk/user-guide/profile/)
+* [Cray Technical Documentation](https://support.hpe.com/hpesc/public/docDisplay?docId=a00115110en_us&docLocale=en_US&page=Cray_Performance_Measurement_and_Analysis_Tools_CPMAT.html)
 
 If the documentation does not answer your questions then please contact
 [the ARCHER2 Service Desk](https://www.archer2.ac.uk/support-access/servicedesk.html) and they
