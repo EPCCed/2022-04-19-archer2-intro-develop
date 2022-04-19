@@ -14,16 +14,10 @@ keypoints:
 - "The main debugging tool is *gdb4hpc*"
 ---
 
-ARCHER2 has a range of debugging and profiling software available. In this section we provide a brief
-overview of the tools available, their applicability and links to more information. A detailed tutorial
-on the use of these tools is beyond the scope of this course but if you are interested in this, then
-you may be interested in the following courses offered by the ARCHER2 service:
-
-* Performance Analysis Workshop
-
-The [Cray Performance Measurement and Analysis Tools User Guide](https://pubs.cray.com/bundle/Cray_Performance_Measurement_and_Analysis_Tools_User_Guide_644_S-2376/page/About_the_Cray_Performance_Measurement_and_Analysis_Tools_User_Guide.html)
-and the ARCHER2 [debugging](https://docs.archer2.ac.uk/user-guide/debug/) and
-[profiling](https://docs.archer2.ac.uk/user-guide/profile/) documentation will also be useful.
+ARCHER2 has a range of debugging software available. In this section we will briefly list the tools
+available on the system and then run through the process of debugging a small MPI program with
+gdb4hpc. For more information, the ARCHER2 [debugging](https://docs.archer2.ac.uk/user-guide/debug/)
+documentation will also be useful.
 
 ## Debugging tools overview
 
@@ -118,8 +112,10 @@ Once the code is loaded, you can use various commands to move through your code.
 * ``list`` -- Will show the current line of code and the 9 lines following. Repeated use of ``list`` will move you down the code in ten-line chunks.
 * ``next`` -- Will jump to the next step in the program for each process and output which line of code each process is on. It will not enter subroutines. Note that there is no reverse-step in gdb4hpc.
 * ``step`` -- Like ``next``, but this will step into subroutines.
+* ``break source.c:10`` -- Set a breakpoint at line 10 of source code file ``source.c``.
+* ``continue`` -- Run until a breakpoint is reached or execution is halted.
 * ``halt`` -- Pause the program so you can examine it. Useful if you suspect e.g. that it may be e.g. stuck in blocking communication or in a loop.
-* ``up`` -- Go up one level in the program (*e.g.* from a subroutine back to main).
+* ``up``/``down`` -- Go up/down one stack frame in the program (*e.g.* from a subroutine back to main).
 * ``print var`` -- Prints the value of variable ``var`` at this point in the code.
 * ``watch var`` -- Like print, but will print whenever a variable changes value.
 * ``backtrace`` -- Prints the stack trace for each process.
@@ -300,11 +296,11 @@ dbg all> release $my_prog
 
 ## Getting help with debugging tools
 
-You can find more information on the debugging and profiling tools available on ARCHER2 in the ARCHER2 Documentation
-and the Cray documentation:
+You can find more information on the debugging tools available on ARCHER2 in the ARCHER2 Documentation
+and the HPE Cray documentation:
 
 * [ARCHER2 Documentation](https://docs.archer2.ac.uk)
-* [Cray Technical Documentation](https://pubs.cray.com/)
+* [HPE Cray Technical Documentation](https://support.hpe.com/)
 
 If the documentation does not answer your questions then please contact
 [the ARCHER2 Service Desk](https://www.archer2.ac.uk/support-access/servicedesk.html) and they
